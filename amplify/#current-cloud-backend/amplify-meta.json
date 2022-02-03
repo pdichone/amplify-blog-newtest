@@ -1,0 +1,109 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-blogamplifytest-dev-155130-authRole",
+      "UnauthRoleArn": "arn:aws:iam::371636523863:role/amplify-blogamplifytest-dev-155130-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::371636523863:role/amplify-blogamplifytest-dev-155130-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-blogamplifytest-dev-155130-deployment",
+      "UnauthRoleName": "amplify-blogamplifytest-dev-155130-unauthRole",
+      "StackName": "amplify-blogamplifytest-dev-155130",
+      "StackId": "arn:aws:cloudformation:us-west-2:371636523863:stack/amplify-blogamplifytest-dev-155130/0e065140-8483-11ec-a316-02035b347f51",
+      "AmplifyAppId": "d3o0br06uj8uuc"
+    }
+  },
+  "api": {
+    "blogamplifytest": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 345,
+              "apiKeyExpirationDate": "2023-01-13T23:57:39.355Z",
+              "description": ""
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authblogamplifytest55fdec96"
+              }
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "bjlhkws4s5fkjmegjr6qwsh7om",
+        "GraphQLAPIEndpointOutput": "https://rx3eo36razdetcaleejsya2wdm.appsync-api.us-west-2.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-7vd6wcfyirgvrldk2o5llaoxmi"
+      },
+      "lastPushTimeStamp": "2022-02-03T01:11:40.082Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-blogamplifytest-dev-155130-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiblogamplifytest"
+      },
+      "lastPushDirHash": "1WvlqtQ2Jj45CgejmZck/O3gtuM="
+    }
+  },
+  "auth": {
+    "blogamplifytest55fdec96": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-blogamplifytest-dev-155130-deployment/amplify-cfn-templates/auth/blogamplifytest55fdec96-cloudformation-template.json",
+        "logicalId": "authblogamplifytest55fdec96"
+      },
+      "lastPushTimeStamp": "2022-02-03T01:11:40.083Z",
+      "output": {
+        "UserPoolId": "us-west-2_pJpQscaLg",
+        "AppClientIDWeb": "7ouuru90s1msfb4e0lghpk371f",
+        "AppClientID": "64vqgjfa7th3m9r5p3lagg509",
+        "IdentityPoolId": "us-west-2:6027b6c8-329f-4bed-89f0-bce72263cc60",
+        "UserPoolArn": "arn:aws:cognito-idp:us-west-2:371636523863:userpool/us-west-2_pJpQscaLg",
+        "IdentityPoolName": "blogamplifytest55fdec96_identitypool_55fdec96__dev",
+        "UserPoolName": "blogamplifytest55fdec96_userpool_55fdec96"
+      },
+      "lastPushDirHash": "4iM3NKXdZvsCQ9XkNd01NRAL3PA="
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-blogamplifytest-dev-155130-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      },
+      "lastPushTimeStamp": "2022-02-03T01:11:40.138Z",
+      "output": {
+        "S3BucketSecureURL": "https://blogamplifytest-20220202170851-hostingbucket-dev.s3.amazonaws.com",
+        "WebsiteURL": "http://blogamplifytest-20220202170851-hostingbucket-dev.s3-website-us-west-2.amazonaws.com",
+        "Region": "us-west-2",
+        "HostingBucketName": "blogamplifytest-20220202170851-hostingbucket-dev"
+      },
+      "lastPushDirHash": "DeQ5FycFX9WsGgu5fACX6YUvP6s="
+    }
+  }
+}
